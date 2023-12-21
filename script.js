@@ -7,7 +7,7 @@ function updateStatus() {
 
     // Copy the content and attributes from the "p" element to the new "h1" element
     h1Element.textContent = statusElement.textContent;
-    h1Element.id = statusElement.id;
+    // h1Element.id = statusElement.id;
 
     // Replace the "p" element with the new "h1" element
     statusElement.parentNode.replaceChild(h1Element, statusElement);
