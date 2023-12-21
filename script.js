@@ -1,16 +1,14 @@
-//your JS code here. If required.
- function updateStatus() {
-            // Get the "p" tag by its id
-            var statusElement = document.getElementById("status");
-	 statusElement.remove();
+function updateStatus() {
+    // Get the "p" tag by its id
+    var statusElement = document.getElementById("status");
 
-            // Update the text content of the "p" tag
-            statusElement.textContent = "Entered Metaverse";
+    // Create a new "h1" element
+    var h1Element = document.createElement("h1");
 
-            // Optionally, you can also create and append an h1 tag
-            var h1Element = document.createElement("h1");
-            h1Element.textContent = "Entered Metaverse";
+    // Copy the content and attributes from the "p" element to the new "h1" element
+    h1Element.textContent = statusElement.textContent;
+    h1Element.id = statusElement.id;
 
-            // Append the h1 tag to the body or another container if needed
-            document.body.appendChild(h1Element);
-        }
+    // Replace the "p" element with the new "h1" element
+    statusElement.parentNode.replaceChild(h1Element, statusElement);
+}
